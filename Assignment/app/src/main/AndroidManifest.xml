@@ -18,6 +18,16 @@
         </activity>
         <activity android:name=".Cafe">
         </activity>
+        <activity android:name=".FastFood">
+        </activity>
+        <activity android:name=".Pub">
+        </activity>
+        <activity android:name=".Diner">
+        </activity>
+        <activity android:name=".SandwichBar">
+        </activity>
+        <activity android:name=".Restaurant">
+        </activity>
     </application>
 
 </manifest>

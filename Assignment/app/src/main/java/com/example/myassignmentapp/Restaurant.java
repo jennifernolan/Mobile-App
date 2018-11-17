@@ -10,5 +10,30 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Restaurant {
+public class Restaurant extends Activity{
+    ListView listView;
+
+    ArrayAdapter<String> adapter;
+    ArrayList<String> data;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_place);
+
+        listView = findViewById(R.id.placelistview);
+        data = new ArrayList<String>();
+        data.add("Bunsen");
+        data.add("The Jar");
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(Restaurant.this, "You clicked " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }
