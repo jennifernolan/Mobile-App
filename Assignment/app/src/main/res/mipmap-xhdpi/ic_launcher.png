@@ -1,0 +1,66 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Copy" count="1" />
+      <entry action="$Delete" count="1" />
+      <entry action="$SelectAll" count="1" />
+      <entry action="$Undo" count="361" />
+      <entry action="Android.RunAndroidAvdManager" count="3" />
+      <entry action="Android.RunAndroidSdkManager" count="2" />
+      <entry action="DialogOkAction Enter" count="1" />
+      <entry action="EditorBackSpace" count="2559" />
+      <entry action="EditorChooseLookupItem" count="83" />
+      <entry action="EditorCopy" count="42" />
+      <entry action="EditorCut" count="33" />
+      <entry action="EditorDelete" count="326" />
+      <entry action="EditorDeleteLine" count="207" />
+      <entry action="EditorDeleteToWordStart" count="3" />
+      <entry action="EditorDown" count="211" />
+      <entry action="EditorEnter" count="391" />
+      <entry action="EditorIndentSelection" count="1" />
+      <entry action="EditorLeft" count="324" />
+      <entry action="EditorPaste" count="134" />
+      <entry action="EditorRight" count="471" />
+      <entry action="EditorSplitLine" count="1" />
+      <entry action="EditorTab" count="96" />
+      <entry action="EditorUp" count="95" />
+      <entry action="FileChooser.Refresh" count="13" />
+      <entry action="GotoAction" count="1" />
+      <entry action="NewClass" count="1" />
+      <entry action="NewDir" count="2" />
+      <entry action="NewFile" count="1" />
+      <entry action="NewProject" count="9" />
+      <entry action="OpenFile" count="11" />
+      <entry action="Run" count="92" />
+      <entry action="SaveAll" count="207" />
+      <entry action="SearchEverywhere" count="1" />
+      <entry action="ShowIntentionActions" count="40" />
+      <entry action="SynchronizeCurrentFile" count="1" />
+      <entry action="ToggleLineBreakpoint" count="1" />
+    </counts>
+  </component>
+  <component name="FeatureUsageStatistics" first-run="1538556335343" have-been-shown="false" show-in-other="true" show-in-compilation="true">
+    <feature id="refactoring.moveTopLevel" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.rename" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.pushDown" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineMacro" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.changeSignature" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickFix" count="2" last-shown="0" last-used="1541751561665" shown-count="0" />
+    <feature id="codeassists.altInsert" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.complete.statement" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineTypedef" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceConstant" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.pullUp" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.popup.class" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.overrideimplement" count="1" last-shown="0" last-used="1539764013479" shown-count="0" />
+    <feature id="codeassists.parameterInfo" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.inlineParameter" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="codeassists.quickdefinition" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="editing.completion.basic" count="85" last-shown="0" last-used="1541794399825" shown-count="0" />
+    <feature id="refactoring.inlineConst" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="tag.name.completion" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="generate.definitions" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.extractMethod" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="refactoring.introduceDefine" count="0" last-shown="0" last-used="0" shown-count="
