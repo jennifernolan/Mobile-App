@@ -37,7 +37,6 @@ public class Cafe extends Activity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println(adapter.getItem(position));
                 String place = adapter.getItem(position);
                 Intent intent = new Intent(Cafe.this, DetailsActivity.class);
                 intent.putExtra("place_id", place);

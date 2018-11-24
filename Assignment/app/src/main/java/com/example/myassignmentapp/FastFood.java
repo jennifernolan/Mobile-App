@@ -1,6 +1,7 @@
 package com.example.myassignmentapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,7 +34,10 @@ public class FastFood extends Activity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(FastFood.this, "You clicked " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
+                String place = adapter.getItem(position);
+                Intent intent = new Intent(FastFood.this, DetailsActivity.class);
+                intent.putExtra("place_id", place);
+                startActivity(intent);
             }
         });
     }

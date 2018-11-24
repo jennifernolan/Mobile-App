@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">My Assignment App</string>
-    <string name="starbucks">Starbucks</string>
-    <string name="costa">Costa</string>
-    <string name="toasted">Toasted</string>
-    <string name="insomnia">Insomnia</string>
 </resources>

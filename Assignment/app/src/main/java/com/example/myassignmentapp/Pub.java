@@ -1,6 +1,7 @@
 package com.example.myassignmentapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,7 +25,6 @@ public class Pub extends Activity{
         listView = findViewById(R.id.placelistview);
         data = new ArrayList<String>();
         data.add("Whelans");
-        data.add("Karma Stone");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
         listView.setAdapter(adapter);
@@ -32,7 +32,10 @@ public class Pub extends Activity{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Pub.this, "You clicked " + adapter.getItem(position), Toast.LENGTH_SHORT).show();
+                String place = adapter.getItem(position);
+                Intent intent = new Intent(Pub.this, DetailsActivity.class);
+                intent.putExtra("place_id", place);
+                startActivity(intent);
             }
         });
     }
