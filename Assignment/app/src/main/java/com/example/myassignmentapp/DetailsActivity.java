@@ -2,7 +2,10 @@ package com.example.myassignmentapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +25,7 @@ public class DetailsActivity extends Activity {
             "Subway is an American privately held fast food restaurant franchise that primarily sells submarine sandwiches (subs) and salads. Subway is one of the fastest-growing franchises in the world.\n\nIt is the largest single-brand restaurant chain, and the largest restaurant operator, in the world. Subway's core product is the submarine sandwich. In addition to these, the chain also sells wraps, salad, paninis, and baked goods (including cookies, doughnuts, and muffins).\n\n",
             "SPAR is a Dutch-founded multinational group that manages independently owned and operated food retail stores.\n\n It was founded in the Netherlands in 1932, by Adriaan van Well. Its headquarters are located in Amsterdam. The company operates a partnership programme and has a presence in most European countries.\n\nThe SPAR motto is \"under the tree\".\n\n"
     };
+    private Button moreInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,70 +37,163 @@ public class DetailsActivity extends Activity {
         Intent intent = getIntent();
         String place = intent.getStringExtra("place_id");
         String text = "";
+        moreInfo = findViewById(R.id.moreInfo);
+
         if(place.equals("Starbucks"))
         {
             image.setImageResource(R.drawable.starbucks);
             text = PLACE_DETAILS[0];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.starbucks.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Costa"))
         {
             image.setImageResource(R.drawable.costa);
             text = PLACE_DETAILS[1];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.costaireland.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Toasted"))
         {
             image.setImageResource(R.drawable.toasted);
             text = PLACE_DETAILS[2];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tripadvisor.ie/Restaurant_Review-g186605-d7260504-Reviews-Toasted_Cafe-Dublin_County_Dublin.html"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Insomnia"))
         {
             image.setImageResource(R.drawable.insomnia);
             text = PLACE_DETAILS[3];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.insomnia.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Wow Burger"))
         {
             image.setImageResource(R.drawable.wowburger);
             text = PLACE_DETAILS[4];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wowburger.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Eddie Rockets"))
         {
             image.setImageResource(R.drawable.eddierockets);
             text = PLACE_DETAILS[5];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eddierockets.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Boojum"))
         {
             image.setImageResource(R.drawable.boojum);
             text = PLACE_DETAILS[6];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.boojummex.com/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Burritos and Blues"))
         {
             image.setImageResource(R.drawable.burritosandblues);
             text = PLACE_DETAILS[7];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.burritos.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Whelans"))
         {
             image.setImageResource(R.drawable.whelans);
             text = PLACE_DETAILS[8];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.whelanslive.com/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Bunsen"))
         {
             image.setImageResource(R.drawable.bunsen);
             text = PLACE_DETAILS[9];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bunsen.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("The Jar"))
         {
             image.setImageResource(R.drawable.thejar);
             text = PLACE_DETAILS[10];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://thejar.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Subway"))
         {
             image.setImageResource(R.drawable.subway);
             text = PLACE_DETAILS[11];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.subway.com/en-IE"));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Spar"))
         {
             image.setImageResource(R.drawable.spar);
             text = PLACE_DETAILS[12];
+            moreInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.spar.ie/"));
+                    startActivity(intent);
+                }
+            });
         }
 
         TextView tv = (TextView) findViewById(R.id.place_info);

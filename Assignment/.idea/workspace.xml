@@ -36,20 +36,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DetailsActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DetailsActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="3264">
+              <caret line="192" column="98" selection-start-line="192" selection-start-column="98" selection-end-line="192" selection-end-column="98" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5907#6190#0" expanded="true" />
+                <element signature="e#6189#6190#0" expanded="true" />
+                <element signature="e#6383#6666#0" expanded="true" />
+                <element signature="e#6665#6666#0" expanded="true" />
+                <element signature="e#6863#7146#0" expanded="true" />
+                <element signature="e#7145#7146#0" expanded="true" />
+                <element signature="e#7345#7628#0" expanded="true" />
+                <element signature="e#7627#7628#0" expanded="true" />
+                <element signature="e#7830#8113#0" expanded="true" />
+                <element signature="e#8112#8113#0" expanded="true" />
+                <element signature="e#8321#8604#0" expanded="true" />
+                <element signature="e#8603#8604#0" expanded="true" />
+                <element signature="e#8799#9082#0" expanded="true" />
+                <element signature="e#9081#9082#0" expanded="true" />
+                <element signature="e#9299#9582#0" expanded="true" />
+                <element signature="e#9581#9582#0" expanded="true" />
+                <element signature="e#9779#10062#0" expanded="true" />
+                <element signature="e#10061#10062#0" expanded="true" />
+                <element signature="e#10257#10540#0" expanded="true" />
+                <element signature="e#10539#10540#0" expanded="true" />
+                <element signature="e#10737#11020#0" expanded="true" />
+                <element signature="e#11019#11020#0" expanded="true" />
+                <element signature="e#11216#11499#0" expanded="true" />
+                <element signature="e#11498#11499#0" expanded="true" />
+                <element signature="e#11691#11974#0" expanded="true" />
+                <element signature="e#11973#11974#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_places.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_places.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_places.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            <state relative-caret-position="308">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -2336,8 +2365,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/Pub.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/Restaurant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/SandwichBar.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_places.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java" />
       </list>
     </option>
   </component>
@@ -2535,13 +2564,13 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32178217" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info anchor="bottom" id="Logcat" order="7" weight="0.32838285" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.59811616" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3956044" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32328308" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2562,6 +2591,52 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5907#6190#0" expanded="true" />
+            <element signature="e#6189#6190#0" expanded="true" />
+            <element signature="e#6383#6666#0" expanded="true" />
+            <element signature="e#6665#6666#0" expanded="true" />
+            <element signature="e#6863#7146#0" expanded="true" />
+            <element signature="e#7145#7146#0" expanded="true" />
+            <element signature="e#7345#7628#0" expanded="true" />
+            <element signature="e#7627#7628#0" expanded="true" />
+            <element signature="e#7830#8113#0" expanded="true" />
+            <element signature="e#8112#8113#0" expanded="true" />
+            <element signature="e#8321#8604#0" expanded="true" />
+            <element signature="e#8603#8604#0" expanded="true" />
+            <element signature="e#8799#9082#0" expanded="true" />
+            <element signature="e#9081#9082#0" expanded="true" />
+            <element signature="e#9299#9582#0" expanded="true" />
+            <element signature="e#9581#9582#0" expanded="true" />
+            <element signature="e#9779#10062#0" expanded="true" />
+            <element signature="e#10061#10062#0" expanded="true" />
+            <element signature="e#10257#10540#0" expanded="true" />
+            <element signature="e#10539#10540#0" expanded="true" />
+            <element signature="e#10737#11020#0" expanded="true" />
+            <element signature="e#11019#11020#0" expanded="true" />
+            <element signature="e#11216#11499#0" expanded="true" />
+            <element signature="e#11498#11499#0" expanded="true" />
+            <element signature="e#11691#11974#0" expanded="true" />
+            <element signature="e#11973#11974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_places.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/Cafe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -2703,21 +2778,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_places.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        <state relative-caret-position="308">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myassignmentapp/DetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="192" column="98" selection-start-line="192" selection-start-column="98" selection-end-line="192" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5907#6190#0" expanded="true" />
+            <element signature="e#6189#6190#0" expanded="true" />
+            <element signature="e#6383#6666#0" expanded="true" />
+            <element signature="e#6665#6666#0" expanded="true" />
+            <element signature="e#6863#7146#0" expanded="true" />
+            <element signature="e#7145#7146#0" expanded="true" />
+            <element signature="e#7345#7628#0" expanded="true" />
+            <element signature="e#7627#7628#0" expanded="true" />
+            <element signature="e#7830#8113#0" expanded="true" />
+            <element signature="e#8112#8113#0" expanded="true" />
+            <element signature="e#8321#8604#0" expanded="true" />
+            <element signature="e#8603#8604#0" expanded="true" />
+            <element signature="e#8799#9082#0" expanded="true" />
+            <element signature="e#9081#9082#0" expanded="true" />
+            <element signature="e#9299#9582#0" expanded="true" />
+            <element signature="e#9581#9582#0" expanded="true" />
+            <element signature="e#9779#10062#0" expanded="true" />
+            <element signature="e#10061#10062#0" expanded="true" />
+            <element signature="e#10257#10540#0" expanded="true" />
+            <element signature="e#10539#10540#0" expanded="true" />
+            <element signature="e#10737#11020#0" expanded="true" />
+            <element signature="e#11019#11020#0" expanded="true" />
+            <element signature="e#11216#11499#0" expanded="true" />
+            <element signature="e#11498#11499#0" expanded="true" />
+            <element signature="e#11691#11974#0" expanded="true" />
+            <element signature="e#11973#11974#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
