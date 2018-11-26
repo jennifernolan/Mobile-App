@@ -26,6 +26,7 @@ public class DetailsActivity extends Activity {
             "SPAR is a Dutch-founded multinational group that manages independently owned and operated food retail stores.\n\n It was founded in the Netherlands in 1932, by Adriaan van Well. Its headquarters are located in Amsterdam. The company operates a partnership programme and has a presence in most European countries.\n\nThe SPAR motto is \"under the tree\".\n\n"
     };
     private Button moreInfo;
+    private Button directions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,6 +39,7 @@ public class DetailsActivity extends Activity {
         String place = intent.getStringExtra("place_id");
         String text = "";
         moreInfo = findViewById(R.id.moreInfo);
+        directions = findViewById(R.id.directions);
 
         if(place.equals("Starbucks"))
         {
@@ -47,6 +49,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.starbucks.ie/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2670536;
+                    double lat = 53.3376248;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -62,6 +74,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2660381;
+                    double lat = 53.3379645;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Toasted"))
         {
@@ -71,6 +93,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tripadvisor.ie/Restaurant_Review-g186605-d7260504-Reviews-Toasted_Cafe-Dublin_County_Dublin.html"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2667353;
+                    double lat = 53.3376162;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -86,6 +118,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2656169;
+                    double lat = 53.3370771;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Wow Burger"))
         {
@@ -95,6 +137,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wowburger.ie/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2655212;
+                    double lat = 53.336678;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -110,6 +162,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2654893;
+                    double lat = 53.3365897;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Boojum"))
         {
@@ -119,6 +181,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.boojummex.com/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2668945;
+                    double lat = 53.3376175;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -134,6 +206,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2657265;
+                    double lat = 53.3374192;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Whelans"))
         {
@@ -143,6 +225,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.whelanslive.com/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2654893;
+                    double lat = 53.3365897;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -158,6 +250,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2657809;
+                    double lat = 53.3372493;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("The Jar"))
         {
@@ -167,6 +269,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://thejar.ie/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.265717;
+                    double lat = 53.3369592;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
@@ -182,6 +294,16 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2656402;
+                    double lat = 53.3371618;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Spar"))
         {
@@ -191,6 +313,16 @@ public class DetailsActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.spar.ie/"));
+                    startActivity(intent);
+                }
+            });
+            directions.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    double lon = -6.2657265;
+                    double lat = 53.3374192;
+                    String location = "geo:" + lat + "," + lon + "?z=18";
+                    final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
                     startActivity(intent);
                 }
             });
