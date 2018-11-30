@@ -27,6 +27,7 @@ public class DetailsActivity extends Activity {
     };
     private Button moreInfo;
     private Button directions;
+    private Button favorite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,10 +37,11 @@ public class DetailsActivity extends Activity {
 
         ImageView image = (ImageView)findViewById(R.id.logo);
         Intent intent = getIntent();
-        String place = intent.getStringExtra("place_id");
+        final String place = intent.getStringExtra("place_id");
         String text = "";
         moreInfo = findViewById(R.id.moreInfo);
         directions = findViewById(R.id.directions);
+        favorite = findViewById(R.id.favorite);
 
         if(place.equals("Starbucks"))
         {
@@ -59,6 +61,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3376248;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -84,6 +94,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Toasted"))
         {
@@ -103,6 +121,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3376162;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -128,6 +154,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Wow Burger"))
         {
@@ -147,6 +181,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.336678;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -172,6 +214,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Boojum"))
         {
@@ -191,6 +241,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3376175;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -216,6 +274,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Whelans"))
         {
@@ -235,6 +301,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3365897;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -260,6 +334,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("The Jar"))
         {
@@ -279,6 +361,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3369592;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });
@@ -304,6 +394,14 @@ public class DetailsActivity extends Activity {
                     startActivity(intent);
                 }
             });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
+                    startActivity(intent);
+                }
+            });
         }
         else if(place.equals("Spar"))
         {
@@ -323,6 +421,14 @@ public class DetailsActivity extends Activity {
                     double lat = 53.3374192;
                     String location = "geo:" + lat + "," + lon + "?z=18";
                     final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(location));
+                    startActivity(intent);
+                }
+            });
+            favorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
             });

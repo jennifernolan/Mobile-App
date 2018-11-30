@@ -30,6 +30,10 @@
         </activity>
         <activity android:name=".DetailsActivity">
         </activity>
+        <activity android:name=".CreateFavoriteActivity">
+        </activity>
+        <activity android:name=".MainFavoriteActivity">
+        </activity>
     </application>
 
 </manifest>
