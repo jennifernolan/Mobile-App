@@ -12,10 +12,12 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainFavoriteActivity extends AppCompatActivity {
+
     private RecyclerView mFavoritesRecyclerView;
     private FavoritesRecyclerAdapter mFavoritesRecyclerAdapter;
     private FavoritesDAO mFavoritesDAO;
     private Button menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +43,13 @@ public class MainFavoriteActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         loadfavs();
     }
 
-    private void loadfavs() {
+    private void loadfavs()
+    {
         mFavoritesRecyclerAdapter.updateData(mFavoritesDAO.getFavorites());
     }
+
+
 }

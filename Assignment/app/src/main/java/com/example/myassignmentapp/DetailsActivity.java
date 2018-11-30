@@ -1,15 +1,15 @@
 package com.example.myassignmentapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailsActivity extends Activity {
+public class DetailsActivity extends AppCompatActivity {
     private static final String[] PLACE_DETAILS = {
             "American coffee company and coffeehouse chain. Starbucks was founded in Seattle, Washington in 1971.\n\nStarbucks locations serve hot and cold drinks, whole-bean coffee, microground instant coffee known as espresso, caffe latte, full and loose leaf teas including Teavana tea products,\n\nEvolution Fresh juices, Frappuccino beverages, La Boulange pastries, and snacks including items such as chips and crackers.\n\nMany stores sell pre-packaged food items, hot and cold sandwiches, and drinkware including mugs and tumblers\n\n",
             "Costa Coffee is a British multinational coffeehouse company headquartered in Dunstable, Bedfordshire, and a wholly owned subsidiary of Whitbread.\n\nCosta Coffee was founded in London in 1971 by the Costa family as a wholesale operation supplying roasted coffee to caterers and specialist Italian coffee shops. \n\nCosta sells: Hot drinks(coffees, teas and hot chocolates), Cold drinks(Frostino and fruit coolers),\n\nSavoury snacks(including sandwiches and breakfast items) and Cakes and pastries(including cookies, brownies and croissants)\n\n",
@@ -28,6 +28,8 @@ public class DetailsActivity extends Activity {
     private Button moreInfo;
     private Button directions;
     private Button favorite;
+
+    private static final int RC_CREATE_FAVS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,7 +71,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -99,7 +101,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -129,7 +131,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -159,7 +161,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -189,7 +191,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -219,7 +221,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -249,7 +251,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -279,7 +281,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -309,7 +311,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -339,7 +341,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -369,7 +371,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -399,7 +401,7 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
@@ -429,12 +431,23 @@ public class DetailsActivity extends Activity {
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
                     intent.putExtra("place", place);
-                    startActivity(intent);
+                    startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
         }
 
         TextView tv = (TextView) findViewById(R.id.place_info);
         tv.setText(text);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == RC_CREATE_FAVS && resultCode == RESULT_OK)
+        {
+            Intent intent = new Intent(DetailsActivity.this, MainFavoriteActivity.class);
+            startActivity(intent);
+        }
     }
 }

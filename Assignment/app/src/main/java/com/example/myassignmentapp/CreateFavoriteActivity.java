@@ -51,8 +51,6 @@ public class CreateFavoriteActivity extends AppCompatActivity {
                 {
                     Toast.makeText(CreateFavoriteActivity.this, "This has already been created", Toast.LENGTH_SHORT).show();
                 }
-                Intent intent = new Intent(CreateFavoriteActivity.this, MainFavoriteActivity.class);
-                startActivity(intent);
             }
         });
     }
