@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapter;
     ArrayList<String> data;
+    private Button favs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        favs = findViewById(R.id.favs);
 
         listView = findViewById(R.id.listview);
 
@@ -71,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Diner.class);
                     MainActivity.this.startActivity(intent);
                 }
+            }
+        });
+
+        favs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainFavoriteActivity.class);
+                startActivity(intent);
             }
         });
     }

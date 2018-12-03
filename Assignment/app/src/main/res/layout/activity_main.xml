@@ -6,6 +6,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/favs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorites"
+        />
+
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
@@ -19,4 +26,5 @@
         android:layout_height="match_parent"
         >
     </ListView>
+
 </LinearLayout>

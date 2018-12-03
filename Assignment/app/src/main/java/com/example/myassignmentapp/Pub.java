@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,10 +17,14 @@ public class Pub extends AppCompatActivity{
     ArrayAdapter<String> adapter;
     ArrayList<String> data;
 
+    private Button favs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
+
+        favs = findViewById(R.id.favs);
 
         listView = findViewById(R.id.placelistview);
         data = new ArrayList<String>();
@@ -34,6 +39,14 @@ public class Pub extends AppCompatActivity{
                 String place = adapter.getItem(position);
                 Intent intent = new Intent(Pub.this, DetailsActivity.class);
                 intent.putExtra("place_id", place);
+                startActivity(intent);
+            }
+        });
+
+        favs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Pub.this, MainFavoriteActivity.class);
                 startActivity(intent);
             }
         });
