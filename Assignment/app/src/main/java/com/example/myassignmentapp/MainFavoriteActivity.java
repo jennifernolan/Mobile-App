@@ -18,6 +18,7 @@ public class MainFavoriteActivity extends AppCompatActivity {
     private FavoritesDAO mFavoritesDAO;
     private Button menu;
 
+    private static final int RC_UPDATE_FAVS = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,24 @@ public class MainFavoriteActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build()
                 .getFavoritesDAO();
+        System.out.println(mFavoritesDAO);
 
         mFavoritesRecyclerView = findViewById(R.id.favoritesRecyclerView);
         mFavoritesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mFavoritesRecyclerAdapter = new FavoritesRecyclerAdapter(this, new ArrayList<Favorites>());
+
+        mFavoritesRecyclerAdapter.addActionCallback(new FavoritesRecyclerAdapter.ActionCallback()
+        {
+            @Override
+            public void onLongClickListener(Favorites favorite)
+            {
+                Intent intent = new Intent(MainFavoriteActivity.this, UpdateFavoriteActivity.class);
+                intent.putExtra(UpdateFavoriteActivity.EXTRA_FAVORITES_ID, favorite.getId());
+                startActivityForResult(intent, RC_UPDATE_FAVS);
+            }
+        });
+
         mFavoritesRecyclerView.setAdapter(mFavoritesRecyclerAdapter);
 
         menu = findViewById(R.id.menu);
@@ -51,5 +65,15 @@ public class MainFavoriteActivity extends AppCompatActivity {
         mFavoritesRecyclerAdapter.updateData(mFavoritesDAO.getFavorites());
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == RC_UPDATE_FAVS && resultCode == RESULT_OK)
+        {
+            loadfavs();
+           /* Intent intent = new Intent(MainFavoriteActivity.this, UpdateFavoriteActivity.class);
+            startActivity(intent);*/
+        }
+    }
 }

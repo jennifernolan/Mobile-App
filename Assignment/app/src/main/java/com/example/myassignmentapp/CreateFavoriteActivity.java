@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class CreateFavoriteActivity extends AppCompatActivity {
 
     private TextView mPlaceName;
+    private EditText mNotes;
     private FavoritesDAO mFavoritesDAO;
     private Button mSaveButton;
 
@@ -31,6 +33,7 @@ public class CreateFavoriteActivity extends AppCompatActivity {
 
         mPlaceName = findViewById(R.id.placename);
         mSaveButton = findViewById(R.id.saveButton);
+        mNotes = findViewById(R.id.favnotes);
 
         mPlaceName.setText(place);
 
@@ -38,12 +41,18 @@ public class CreateFavoriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                final String notes = mNotes.getText().toString();
+
                 Favorites favorites = new Favorites();
                 favorites.setPlaceName(place);
+                favorites.setNotes(notes);
+
+                System.out.println(favorites);
 
                 try
                 {
                     mFavoritesDAO.insert(favorites);
+                    System.out.println(mFavoritesDAO);
                     setResult(RESULT_OK);
                     finish();
                 }

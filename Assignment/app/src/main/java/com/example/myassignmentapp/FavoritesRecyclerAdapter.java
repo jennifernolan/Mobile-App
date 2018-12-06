@@ -11,8 +11,14 @@ import java.util.List;
 
 public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecyclerAdapter.ViewHolder>
 {
+    interface ActionCallback
+    {
+        void onLongClickListener(Favorites favorite);
+    }
+
     private Context context;
     private List<Favorites>  favoritesList;
+    private ActionCallback mActionCallbacks;
 
     FavoritesRecyclerAdapter(Context context, List<Favorites> favoritesList)
     {
@@ -24,12 +30,7 @@ public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecy
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         View view = LayoutInflater.from(context).inflate(R.layout.favorite_rows, parent, false);
-        return new ViewHolder(view) {
-            @Override
-            public boolean onLongClick(View v) {
-                return false;
-            }
-        };
+        return new ViewHolder(view);
     }
 
     @Override
@@ -50,22 +51,34 @@ public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecy
         notifyDataSetChanged();
     }
 
-    abstract class ViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener
-    {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
         private TextView mPlaceName;
 
-        ViewHolder(View itemView)
-        {
+        ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnLongClickListener(this);
             mPlaceName = itemView.findViewById(R.id.placename);
         }
 
-        void bindData(int position)
-        {
+        void bindData(int position) {
             Favorites favorites = favoritesList.get(position);
             String place = favorites.getPlaceName();
             mPlaceName.setText(place);
         }
+
+        @Override
+        public boolean onLongClick(View v)
+        {
+            if(mActionCallbacks != null)
+            {
+                mActionCallbacks.onLongClickListener(favoritesList.get(getAdapterPosition()));
+            }
+            return true;
+        }
+    }
+
+    void addActionCallback(ActionCallback actionCallbacks)
+    {
+        mActionCallbacks = actionCallbacks;
     }
 }
