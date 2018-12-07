@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//class to display the information about a selected place to the user
 public class DetailsActivity extends AppCompatActivity {
+    //all of the places details stored in a string array
     private static final String[] PLACE_DETAILS = {
             "American coffee company and coffeehouse chain. Starbucks was founded in Seattle, Washington in 1971.\n\nStarbucks locations serve hot and cold drinks, whole-bean coffee, microground instant coffee known as espresso, caffe latte, full and loose leaf teas including Teavana tea products,\n\nEvolution Fresh juices, Frappuccino beverages, La Boulange pastries, and snacks including items such as chips and crackers.\n\nMany stores sell pre-packaged food items, hot and cold sandwiches, and drinkware including mugs and tumblers\n\n",
             "Costa Coffee is a British multinational coffeehouse company headquartered in Dunstable, Bedfordshire, and a wholly owned subsidiary of Whitbread.\n\nCosta Coffee was founded in London in 1971 by the Costa family as a wholesale operation supplying roasted coffee to caterers and specialist Italian coffee shops. \n\nCosta sells: Hot drinks(coffees, teas and hot chocolates), Cold drinks(Frostino and fruit coolers),\n\nSavoury snacks(including sandwiches and breakfast items) and Cakes and pastries(including cookies, brownies and croissants)\n\n",
@@ -25,6 +27,7 @@ public class DetailsActivity extends AppCompatActivity {
             "Subway is an American privately held fast food restaurant franchise that primarily sells submarine sandwiches (subs) and salads. Subway is one of the fastest-growing franchises in the world.\n\nIt is the largest single-brand restaurant chain, and the largest restaurant operator, in the world. Subway's core product is the submarine sandwich. In addition to these, the chain also sells wraps, salad, paninis, and baked goods (including cookies, doughnuts, and muffins).\n\n",
             "SPAR is a Dutch-founded multinational group that manages independently owned and operated food retail stores.\n\n It was founded in the Netherlands in 1932, by Adriaan van Well. Its headquarters are located in Amsterdam. The company operates a partnership programme and has a presence in most European countries.\n\nThe SPAR motto is \"under the tree\".\n\n"
     };
+    //three buttons declared
     private Button moreInfo;
     private Button directions;
     private Button favorite;
@@ -35,20 +38,29 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //access the layout xml for this page
         setContentView(R.layout.activity_places);
 
+        //display the logo of the selected place in an image
         ImageView image = (ImageView)findViewById(R.id.logo);
+        //get the extra information passed from the intent
         Intent intent = getIntent();
+        //place this extra information in a string
         final String place = intent.getStringExtra("place_id");
         String text = "";
+        //find the three buttons layout using the id from the xml page specified above
         moreInfo = findViewById(R.id.moreInfo);
         directions = findViewById(R.id.directions);
         favorite = findViewById(R.id.favorite);
 
+        //if the string passed through the intent equals the specified string do the following: (same for all of the places)
         if(place.equals("Starbucks"))
         {
+            //set the image to the companies logo
             image.setImageResource(R.drawable.starbucks);
+            //get and display the text specific to that company
             text = PLACE_DETAILS[0];
+            //if the more information button is selected start an intent to go to the places website
             moreInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -56,6 +68,7 @@ public class DetailsActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+            //if the location button is selected open the map application and show the location of the place on the map
             directions.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -66,11 +79,14 @@ public class DetailsActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+            //if the user wants to add the place to their favorites, start an activity to go to the CreateFavoriteActivity class.
             favorite.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(DetailsActivity.this, CreateFavoriteActivity.class);
+                    //add the place name string to the inent as extra information
                     intent.putExtra("place", place);
+                    //start the activity
                     startActivityForResult(intent, RC_CREATE_FAVS);
                 }
             });
@@ -436,10 +452,12 @@ public class DetailsActivity extends AppCompatActivity {
             });
         }
 
+        //display the place information text
         TextView tv = (TextView) findViewById(R.id.place_info);
         tv.setText(text);
     }
 
+    //if the started intent returns the correct values go to the list to that displays the favorites
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {

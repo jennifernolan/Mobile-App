@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//this class is used as an adapter to get the list of database entries from the database and display them back to the user on the MainFavoriteActivity class
 public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecyclerAdapter.ViewHolder>
 {
     interface ActionCallback
@@ -26,6 +27,7 @@ public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecy
         this.favoritesList = favoritesList;
     }
 
+    //create the layout for the list of the returned data from the database
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
@@ -33,12 +35,14 @@ public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecy
         return new ViewHolder(view);
     }
 
+    //get the adapters position
     @Override
     public void onBindViewHolder(ViewHolder holder, int position)
     {
         holder.bindData(position);
     }
 
+    //get the size of the favorites table in the database
     @Override
     public int getItemCount()
     {
@@ -60,12 +64,14 @@ public class FavoritesRecyclerAdapter extends RecyclerView.Adapter<FavoritesRecy
             mPlaceName = itemView.findViewById(R.id.placename);
         }
 
+        //display the list values on the MainFavoriteActivity class
         void bindData(int position) {
             Favorites favorites = favoritesList.get(position);
             String place = favorites.getPlaceName();
             mPlaceName.setText(place);
         }
 
+        //if the user long clicks on one of the lists elements then get the position of that element
         @Override
         public boolean onLongClick(View v)
         {

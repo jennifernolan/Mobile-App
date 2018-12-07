@@ -5,9 +5,11 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+//database table structure
 @Entity(tableName = "favorites")
 public class Favorites {
 
+    //table columns with id auto incrementing
     @PrimaryKey(autoGenerate = true)
     @NonNull
     public int id;

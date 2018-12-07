@@ -10,6 +10,7 @@ import com.example.myassignmentapp.Favorites;
 
 import java.util.List;
 
+//queries, inserts, updates and deletes to the database that the Data Access Object can perform
 @Dao
 public interface FavoritesDAO {
 
