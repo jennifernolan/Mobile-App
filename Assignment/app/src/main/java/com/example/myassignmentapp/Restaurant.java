@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -37,7 +39,21 @@ public class Restaurant extends AppCompatActivity{
         data.add("The Jar");
 
         //create a new adapter to stored and display the array list
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data){
+            //Reference: The following code is from Android example https://android--code.blogspot.com/2015/08/android-listview-text-size.html
+            //set the text of the list view
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent)
+            {
+                //get the item from list view
+                View view = super.getView(position, convertView, parent);
+                TextView tv = (TextView)view.findViewById(android.R.id.text1);
+                //set the text size
+                tv.setTextSize(25);
+                return view;
+            }
+            //Reference complete
+        };
         //set and display the adapter
         listView.setAdapter(adapter);
 
